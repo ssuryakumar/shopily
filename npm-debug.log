@@ -1,0 +1,393 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/manish/local/bin/node',
+1 verbose cli   '/home/manish/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-karma',
+1 verbose cli   '--save' ]
+2 info using npm@1.2.25
+3 info using node@v0.10.10
+4 verbose read json /usr/node/shopily/package.json
+5 warn package.json shopily@0.0.0 No repository field.
+6 warn package.json shopily@0.0.0 No readme data.
+7 verbose from cache /usr/node/shopily/package.json
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'grunt-karma', null ]
+10 verbose cache add name=undefined spec="grunt-karma" args=["grunt-karma",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'grunt-karma',
+11 verbose parsed url   path: 'grunt-karma',
+11 verbose parsed url   href: 'grunt-karma' }
+12 silly lockFile 707ccff9-grunt-karma grunt-karma
+13 verbose lock grunt-karma /home/manish/.npm/707ccff9-grunt-karma.lock
+14 silly lockFile 707ccff9-grunt-karma grunt-karma
+15 silly lockFile 707ccff9-grunt-karma grunt-karma
+16 verbose addNamed [ 'grunt-karma', '' ]
+17 verbose addNamed [ null, '' ]
+18 silly lockFile 94531edb-grunt-karma grunt-karma@
+19 verbose lock grunt-karma@ /home/manish/.npm/94531edb-grunt-karma.lock
+20 silly addNameRange { name: 'grunt-karma', range: '', hasData: false }
+21 verbose url raw grunt-karma
+22 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-karma' ]
+23 verbose url resolved https://registry.npmjs.org/grunt-karma
+24 info trying registry request attempt 1 at 00:48:02
+25 verbose etag "EP6ULKP7UOKEU7IM3N27U9HDY"
+26 http GET https://registry.npmjs.org/grunt-karma
+27 http 304 https://registry.npmjs.org/grunt-karma
+28 silly registry.get cb [ 304,
+28 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+28 silly registry.get     etag: '"EP6ULKP7UOKEU7IM3N27U9HDY"',
+28 silly registry.get     date: 'Thu, 01 Aug 2013 19:18:05 GMT',
+28 silly registry.get     'content-length': '0' } ]
+29 verbose etag grunt-karma from cache
+30 silly addNameRange number 2 { name: 'grunt-karma', range: '', hasData: true }
+31 silly addNameRange versions [ 'grunt-karma',
+31 silly addNameRange   [ '0.3.0',
+31 silly addNameRange     '0.4.0',
+31 silly addNameRange     '0.4.1',
+31 silly addNameRange     '0.4.2',
+31 silly addNameRange     '0.4.3',
+31 silly addNameRange     '0.4.4',
+31 silly addNameRange     '0.5.0',
+31 silly addNameRange     '0.4.5' ] ]
+32 verbose addNamed [ 'grunt-karma', '0.4.5' ]
+33 verbose addNamed [ '0.4.5', '0.4.5' ]
+34 silly lockFile f90d6692-grunt-karma-0-4-5 grunt-karma@0.4.5
+35 verbose lock grunt-karma@0.4.5 /home/manish/.npm/f90d6692-grunt-karma-0-4-5.lock
+36 verbose read json /home/manish/.npm/grunt-karma/0.4.5/package/package.json
+37 silly lockFile f90d6692-grunt-karma-0-4-5 grunt-karma@0.4.5
+38 silly lockFile f90d6692-grunt-karma-0-4-5 grunt-karma@0.4.5
+39 silly lockFile 94531edb-grunt-karma grunt-karma@
+40 silly lockFile 94531edb-grunt-karma grunt-karma@
+41 silly resolved [ { name: 'grunt-karma',
+41 silly resolved     version: '0.4.5',
+41 silly resolved     description: 'grunt plugin for karma test runner',
+41 silly resolved     main: 'tasks/grunt-karma.js',
+41 silly resolved     repository:
+41 silly resolved      { type: 'git',
+41 silly resolved        url: 'https://github.com/karma-runner/grunt-karma.git' },
+41 silly resolved     keywords: [ 'gruntplugin', 'karma', 'grunt', 'test', 'unit', 'runner', 'TDD' ],
+41 silly resolved     scripts: { test: 'grunt test' },
+41 silly resolved     author: { name: 'Dave Geddes' },
+41 silly resolved     license: 'MIT',
+41 silly resolved     readmeFilename: 'README.md',
+41 silly resolved     dependencies: { karma: '~0.8.5' },
+41 silly resolved     devDependencies:
+41 silly resolved      { grunt: '~0.4.1',
+41 silly resolved        'expect.js': '~0.2.0',
+41 silly resolved        'grunt-release': '~0.2.0',
+41 silly resolved        'grunt-contrib-watch': '~0.2.0',
+41 silly resolved        'grunt-conventional-changelog': '0.0.12' },
+41 silly resolved     peerDependencies: { grunt: '0.4.x' },
+41 silly resolved     readme: '#grunt-karma\nGrunt plugin for [Karma](https://github.com/karma-runner/karma)\nNOTE: this plugin requires Grunt 0.4.x\n\n##Getting Started\nFrom the same directory as your project\'s Gruntfile and package.json, install this plugin with the following command:\n\n`npm install grunt-karma --save-dev`\n\nOnce that\'s done, add this line to your project\'s Gruntfile:\n\n```js\ngrunt.loadNpmTasks(\'grunt-karma\');\n```\n\n##Config\nInside your `Gruntfile.js` file, add a section named *karma*, containing any number of configurations for running karma. The only required option is the path to the [karma config file](http://karma-runner.github.com/0.8/config/configuration-file.html). Here\'s a simple example:\n\n```js\nkarma: {\n  unit: {\n    configFile: \'karma.conf.js\'\n  }\n}\n```\n\nYou can override any of the config file\'s settings directly:\n\n```js\nkarma: {\n  unit: {\n    configFile: \'karma.conf.js\',\n    runnerPort: 9999,\n    singleRun: true,\n    browsers: [\'PhantomJS\']\n  }\n}\n```\n\n##Sharing Configs\nIf you have multiple targets, it may be helpful to share common configuration settings between them. Grunt-karma supports this by using the `options` property:\n\n```js\nkarma: {\n  options: {\n    configFile: \'karma.conf.js\',\n    runnerPort: 9999,\n    browsers: [\'Chrome\', \'Firefox\']\n  },\n  continuous: {\n    singleRun: true\n    browsers: [\'PhantomJS\']\n  },\n  dev: {\n    reporters: \'dots\'\n  }\n}\n```\n\nIn this example the `continuous` and `dev` targets will both use the `configFile` and `runnerPort` specified in the `options`. But the `continuous` target will override the browser setting to use PhantomJS, and also run as a singleRun. The `dev` target will simply change the reporter to dots.\n\n##Running tests\nThere are three ways to run your tests with karma:\n\n###Karma Server with Auto Runs on File Change\nSetting the `autoWatch` option to true will instruct karma to start a server and watch for changes to files, running tests automatically:\n\n```js\nkarma: {\n  unit: {\n    configFile: \'karma.conf.js\',\n    autoWatch: true\n  }\n}\n```\nNow run `$ grunt karma`\n\nHowever, usually Grunt projects watch many types of files using [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) or [grunt-regarde](https://github.com/yeoman/grunt-regarde), so this option isn\'t preferred.\n\n###Karma Server with Grunt Watch/Regarde\nConfig karma like usual (without the autoWatch option), and add `background:true`:\n\n```js\nkarma: {\n  unit: {\n    configFile: \'karma.conf.js\',\n    background: true\n  }\n}\n```\nThe `background` option will tell grunt to run karma in a child process so it doesn\'t block subsequent grunt tasks.\n\nConfig your `watch` or `regarde` task to run the karma task with the `:run` flag. For example:\n\n```js\nwatch: {\n  //run unit tests with karma (server needs to be already running)\n  karma: {\n    files: [\'app/js/**/*.js\', \'test/browser/**/*.js\'],\n    tasks: [\'karma:unit:run\'] //NOTE the :run flag\n  }\n},\n```\n\nIn your terminal window run `$ grunt karma:unit watch`, which runs both the karma task and the watch task. Now when grunt watch detects a change to one of your watched files, it will run the tests specified in the `unit` target using the already running karma server. This is the preferred method for development.\n\n###Single Run\nKeeping a browser window & karma server running during development is productive, but not a good solution for build processes. For that reason karma provides a "continuous integration" mode, which will launch the specified browser(s), run the tests, and close the browser(s). It also supports running tests in [PhantomJS](http://phantomjs.org/), a headless webkit browser which is great for running tests as part of a build. To run tests in continous integration mode just add the `singleRun` option:\n\n```js\nkarma: {\n  unit: {\n    configFile: \'config/karma.conf.js\',\n  },\n  //continuous integration mode: run tests once in PhantomJS browser.\n  continuous: {\n    configFile: \'config/karma.conf.js\',\n    singleRun: true,\n    browsers: [\'PhantomJS\']\n  },\n}\n```\n\nThe build would then run `grunt karma:continuous` to start PhantomJS, run tests, and close PhantomJS.\n\n##License\nMIT License',
+41 silly resolved     bugs: { url: 'https://github.com/karma-runner/grunt-karma/issues' },
+41 silly resolved     _id: 'grunt-karma@0.4.5',
+41 silly resolved     _from: 'grunt-karma@' } ]
+42 info install grunt-karma@0.4.5 into /usr/node/shopily
+43 info installOne grunt-karma@0.4.5
+44 verbose from cache /home/manish/.npm/grunt-karma/0.4.5/package/package.json
+45 info /usr/node/shopily/node_modules/grunt-karma unbuild
+46 verbose read json /usr/node/shopily/node_modules/grunt-karma/package.json
+47 verbose tar unpack /home/manish/.npm/grunt-karma/0.4.5/package.tgz
+48 silly lockFile c72e4952-shopily-node-modules-grunt-karma /usr/node/shopily/node_modules/grunt-karma
+49 verbose lock /usr/node/shopily/node_modules/grunt-karma /home/manish/.npm/c72e4952-shopily-node-modules-grunt-karma.lock
+50 silly lockFile e0f4deb1-pm-grunt-karma-0-4-5-package-tgz /home/manish/.npm/grunt-karma/0.4.5/package.tgz
+51 verbose lock /home/manish/.npm/grunt-karma/0.4.5/package.tgz /home/manish/.npm/e0f4deb1-pm-grunt-karma-0-4-5-package-tgz.lock
+52 silly gunzTarPerm modes [ '755', '644' ]
+53 silly gunzTarPerm extractEntry package.json
+54 silly gunzTarPerm extractEntry .npmignore
+55 silly gunzTarPerm extractEntry README.md
+56 silly gunzTarPerm extractEntry LICENSE
+57 silly gunzTarPerm extractEntry Gruntfile.js
+58 silly gunzTarPerm extractEntry karma.conf.js
+59 silly gunzTarPerm extractEntry TODO.md
+60 silly gunzTarPerm extractEntry .idea/.name
+61 silly gunzTarPerm extractEntry .idea/encodings.xml
+62 silly gunzTarPerm extractEntry .idea/grunt-karma.iml
+63 silly gunzTarPerm extractEntry .idea/misc.xml
+64 silly gunzTarPerm extractEntry .idea/modules.xml
+65 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+66 silly gunzTarPerm extractEntry .idea/vcs.xml
+67 silly gunzTarPerm extractEntry .idea/workspace.xml
+68 silly gunzTarPerm extractEntry lib/background.js
+69 silly gunzTarPerm extractEntry CHANGELOG.md
+70 silly gunzTarPerm extractEntry tasks/grunt-karma.js
+71 silly gunzTarPerm extractEntry test/grunt-karma-test.js
+72 verbose read json /usr/node/shopily/node_modules/grunt-karma/package.json
+73 silly lockFile c72e4952-shopily-node-modules-grunt-karma /usr/node/shopily/node_modules/grunt-karma
+74 silly lockFile c72e4952-shopily-node-modules-grunt-karma /usr/node/shopily/node_modules/grunt-karma
+75 silly lockFile e0f4deb1-pm-grunt-karma-0-4-5-package-tgz /home/manish/.npm/grunt-karma/0.4.5/package.tgz
+76 silly lockFile e0f4deb1-pm-grunt-karma-0-4-5-package-tgz /home/manish/.npm/grunt-karma/0.4.5/package.tgz
+77 info preinstall grunt-karma@0.4.5
+78 verbose from cache /usr/node/shopily/node_modules/grunt-karma/package.json
+79 verbose readDependencies using package.json deps
+80 verbose from cache /usr/node/shopily/node_modules/grunt-karma/package.json
+81 verbose readDependencies using package.json deps
+82 verbose cache add [ 'karma@~0.8.5', null ]
+83 verbose cache add name=undefined spec="karma@~0.8.5" args=["karma@~0.8.5",null]
+84 verbose parsed url { protocol: null,
+84 verbose parsed url   slashes: null,
+84 verbose parsed url   auth: null,
+84 verbose parsed url   host: null,
+84 verbose parsed url   port: null,
+84 verbose parsed url   hostname: null,
+84 verbose parsed url   hash: null,
+84 verbose parsed url   search: null,
+84 verbose parsed url   query: null,
+84 verbose parsed url   pathname: 'karma@~0.8.5',
+84 verbose parsed url   path: 'karma@~0.8.5',
+84 verbose parsed url   href: 'karma@~0.8.5' }
+85 verbose cache add name="karma" spec="~0.8.5" args=["karma","~0.8.5"]
+86 verbose parsed url { protocol: null,
+86 verbose parsed url   slashes: null,
+86 verbose parsed url   auth: null,
+86 verbose parsed url   host: null,
+86 verbose parsed url   port: null,
+86 verbose parsed url   hostname: null,
+86 verbose parsed url   hash: null,
+86 verbose parsed url   search: null,
+86 verbose parsed url   query: null,
+86 verbose parsed url   pathname: '~0.8.5',
+86 verbose parsed url   path: '~0.8.5',
+86 verbose parsed url   href: '~0.8.5' }
+87 verbose addNamed [ 'karma', '~0.8.5' ]
+88 verbose addNamed [ null, '>=0.8.5- <0.9.0-' ]
+89 silly lockFile 743c8fef-karma-0-8-5 karma@~0.8.5
+90 verbose lock karma@~0.8.5 /home/manish/.npm/743c8fef-karma-0-8-5.lock
+91 silly addNameRange { name: 'karma', range: '>=0.8.5- <0.9.0-', hasData: false }
+92 verbose url raw karma
+93 verbose url resolving [ 'https://registry.npmjs.org/', './karma' ]
+94 verbose url resolved https://registry.npmjs.org/karma
+95 info trying registry request attempt 1 at 00:48:05
+96 verbose etag "8N831JO50F9JGTMTTE3KRVH2A"
+97 http GET https://registry.npmjs.org/karma
+98 http 304 https://registry.npmjs.org/karma
+99 silly registry.get cb [ 304,
+99 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+99 silly registry.get     etag: '"8N831JO50F9JGTMTTE3KRVH2A"',
+99 silly registry.get     date: 'Thu, 01 Aug 2013 19:18:07 GMT',
+99 silly registry.get     'content-length': '0' } ]
+100 verbose etag karma from cache
+101 silly addNameRange number 2 { name: 'karma', range: '>=0.8.5- <0.9.0-', hasData: true }
+102 silly addNameRange versions [ 'karma',
+102 silly addNameRange   [ '0.8.0',
+102 silly addNameRange     '0.9.0-dart',
+102 silly addNameRange     '0.8.1',
+102 silly addNameRange     '0.8.2',
+102 silly addNameRange     '0.8.3',
+102 silly addNameRange     '0.9.0',
+102 silly addNameRange     '0.8.4',
+102 silly addNameRange     '0.9.1',
+102 silly addNameRange     '0.8.5',
+102 silly addNameRange     '0.9.2',
+102 silly addNameRange     '0.9.2-dart',
+102 silly addNameRange     '0.9.3',
+102 silly addNameRange     '0.8.6',
+102 silly addNameRange     '0.9.4',
+102 silly addNameRange     '0.8.7',
+102 silly addNameRange     '0.9.5',
+102 silly addNameRange     '0.9.6',
+102 silly addNameRange     '0.8.8',
+102 silly addNameRange     '0.9.7' ] ]
+103 verbose addNamed [ 'karma', '0.8.8' ]
+104 verbose addNamed [ '0.8.8', '0.8.8' ]
+105 silly lockFile b2900dd3-karma-0-8-8 karma@0.8.8
+106 verbose lock karma@0.8.8 /home/manish/.npm/b2900dd3-karma-0-8-8.lock
+107 verbose read json /home/manish/.npm/karma/0.8.8/package/package.json
+108 silly lockFile b2900dd3-karma-0-8-8 karma@0.8.8
+109 silly lockFile b2900dd3-karma-0-8-8 karma@0.8.8
+110 silly lockFile 743c8fef-karma-0-8-5 karma@~0.8.5
+111 silly lockFile 743c8fef-karma-0-8-5 karma@~0.8.5
+112 silly resolved [ { name: 'karma',
+112 silly resolved     description: 'Spectacular Test Runner for JavaScript.',
+112 silly resolved     homepage: 'http://karma-runner.github.com/',
+112 silly resolved     bugs: { url: 'https://github.com/karma-runner/karma/issues' },
+112 silly resolved     keywords:
+112 silly resolved      [ 'karma',
+112 silly resolved        'spectacular',
+112 silly resolved        'runner',
+112 silly resolved        'testacular',
+112 silly resolved        'js',
+112 silly resolved        'javascript',
+112 silly resolved        'testing',
+112 silly resolved        'test',
+112 silly resolved        'remote',
+112 silly resolved        'execution' ],
+112 silly resolved     author: { name: 'Vojta Jína', email: 'vojta.jina@gmail.com' },
+112 silly resolved     contributors:
+112 silly resolved      [ [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object],
+112 silly resolved        [Object] ],
+112 silly resolved     dependencies:
+112 silly resolved      { 'socket.io': '~0.9.13',
+112 silly resolved        chokidar: '~0.6',
+112 silly resolved        glob: '~3.1.21',
+112 silly resolved        minimatch: '~0.2',
+112 silly resolved        'http-proxy': '~0.10',
+112 silly resolved        optimist: '0.3.5',
+112 silly resolved        'coffee-script': '~1.6',
+112 silly resolved        xmlbuilder: '0.4.2',
+112 silly resolved        rimraf: '~2.1',
+112 silly resolved        q: '~0.9',
+112 silly resolved        LiveScript: '1.0.1',
+112 silly resolved        colors: '0.6.0-1',
+112 silly resolved        dateformat: '1.0.2-1.2.3',
+112 silly resolved        istanbul: '~0.1.40',
+112 silly resolved        lodash: '~1.1',
+112 silly resolved        growly: '~1.1',
+112 silly resolved        pause: '0.0.1',
+112 silly resolved        mime: '~1.2',
+112 silly resolved        log4js: '~0.6.3' },
+112 silly resolved     devDependencies:
+112 silly resolved      { grunt: '~0.4',
+112 silly resolved        'grunt-simple-mocha': 'git://github.com/yaymukund/grunt-simple-mocha.git',
+112 silly resolved        'grunt-contrib-jshint': '~0.3',
+112 silly resolved        mocks: '~0.0.10',
+112 silly resolved        which: '~1.0',
+112 silly resolved        'sinon-chai': '~2.3',
+112 silly resolved        chai: '~1.5',
+112 silly resolved        mocha: '~1.8',
+112 silly resolved        sinon: '~1.6',
+112 silly resolved        'timer-shim': '~0.2',
+112 silly resolved        'chai-as-promised': '~3.2',
+112 silly resolved        'mock-http-response': '~0.1',
+112 silly resolved        qq: '~0.3' },
+112 silly resolved     preferGlobal: true,
+112 silly resolved     repository: { type: 'git', url: 'git://github.com/karma-runner/karma.git' },
+112 silly resolved     main: './lib/index',
+112 silly resolved     bin: { karma: './bin/karma' },
+112 silly resolved     engines: { node: '~0.8 || ~0.10' },
+112 silly resolved     version: '0.8.8',
+112 silly resolved     readme: '# Karma [![Build Status](https://secure.travis-ci.org/karma-runner/karma.png?branch=stable)](http://travis-ci.org/karma-runner/karma) [![Build Status](https://secure.travis-ci.org/karma-runner/karma.png?branch=master)](http://travis-ci.org/karma-runner/karma)\n\nA simple tool that allows you to execute JavaScript code in multiple\n_real_ browsers, powered by [Node.js] and [Socket.io].\n\n> The main purpose of Karma is to make your TDD development easy,\n>  fast, and fun.\n\n\n## When should I use Karma?\n\n* You want to test code in *real* browsers.\n* You want to test code in multiple browsers (desktop, mobile,\n  tablets, etc.).\n* You want to execute your tests locally during development.\n* You want to execute your tests on a continuous integration server.\n* You want to execute your tests on every save.\n* You love your terminal.\n* You don\'t want your (testing) life to suck.\n* You want to use [Istanbul] to automagically generate coverage\n  reports.\n* You want to use [RequireJS] for your source files.\n\n\n## But I still want to use \\_insert testing library\\_\n\nKarma is not a testing framework, neither an assertion library,\nso for that you can use pretty much anything you like. Right now out\nof the box there is support for\n\n* [Mocha]\n* [Jasmine]\n* [QUnit]\n* \\_anything else\\_ Write your own adapter. It\'s not that hard. And we\n  are here to help.\n\n\n## Which Browsers can I use?\n\nAll the major browsers are supported, if you want to know more see the\n[Browsers] page.\n\n\n## I want to use it. Where do I sign?\n\nYou don\'t need to sign anything but here are some resources to help\nyou to get started.\n\n### Obligatory Screencast.\n\nEvery serious project has a screencast, so here is ours.  Just click\n[here] and let the show begin.\n\n### NPM Installation.\n\nIf you have [Node.js] installed, it\'s as simple as\n\n```bash\n$ npm install -g karma\n```\n\nThis will give you the latest stable version available on npm. If you\nwant to live life on the edge you can do so by\n\n```bash\n$ npm install -g karma@canary\n```\n\nThe curious can have a look at the [wiki] articles for\n[Getting Started] and [Versioning].\n\n### Using it.\n\nGo into your project and create a testacular configuration. That is\njust a simple JavaScript or CoffeeScript file that tells Karma\nwhere all the awesomeness of your project are.\n\nYou can find a simple example in\n[test/client/karma.conf.js](https://github.com/karma-runner/karma/blob/master/test/client/karma.conf.js)\nwhich contains most of the options.\n\nTo create your own from scratch there is the `init` command, which\nwill be named `karma.conf.js` by default:\n\n```bash\n$ karma init\n```\nThis will ask you many questions and if you answered them all correct\nyou will be allowed to use Karma.\n\nFor more information on the configuration options see\n[Configuration File Overview].\n\nNow that you have your configuration all that is left to do is to\nstart Karma:\n```bash\n$ karma start\n```\n\nIf you want to run tests manually (without auto watching file changes), you can:\n```bash\n$ karma run\n```\nBut only if you have started the Karma server before.\n\n\n## Why did you create this?\n\nThroughout the development of [AngularJS], we\'ve been using [JSTD] for\ntesting. I really think that JSTD is a great idea. Unfortunately, we\nhad many problems with JSTD, so we decided to write our own test\nrunner based on the same idea. We wanted a simple tool just for\nexecuting JavaScript tests that is both stable and fast. That\'s why we\nuse the awesome [Socket.io] library and [Node.js].\n\n\n## I still don\'t get it. Where can I get help?\n\n* [Wiki]\n* [Mailing List]\n* [Issuetracker]\n* [@JsKarma] on Twitter\n\n## This is so great. I want to help.\n\nSee\n[Contributing.md](https://github.com/karma-runner/karma/blob/master/CONTRIBUTING.md)\nor the [wiki] for more information.\n\n\n## My boss wants a license. So where is it?\n\n### The MIT License\n\n> Copyright (C) 2011-2013 Vojta Jína.\n>\n> Permission is hereby granted, free of charge, to any person\n> obtaining a copy of this software and associated documentation files\n> (the "Software"), to deal in the Software without restriction,\n> including without limitation the rights to use, copy, modify, merge,\n> publish, distribute, sublicense, and/or sell copies of the Software,\n> and to permit persons to whom the Software is furnished to do so,\n> subject to the following conditions:\n>\n> The above copyright notice and this permission notice shall be\n> included in all copies or substantial portions of the Software.\n>\n> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\n> EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n> MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\n> NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS\n> BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN\n> ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\n> CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n> SOFTWARE.\n\n\n\n[AngularJS]: http://angularjs.org/\n[JSTD]: http://code.google.com/p/js-test-driver/\n[Socket.io]: http://socket.io/\n[Node.js]: http://nodejs.org/\n[Jasmine]: http://pivotal.github.com/jasmine/\n[Mocha]: http://visionmedia.github.com/mocha/\n[QUnit]: http://qunitjs.com/\n[Semantic Versioning]: http://semver.org/\n[here]: http://www.youtube.com/watch?v=MVw8N3hTfCI\n[installers]: http://nodejs.org/download/\n[wiki]: https://github.com/karma-runner/karma/wiki\n[Wiki]: https://github.com/karma-runner/karma/wiki\n[Getting Started]: https://github.com/karma-runner/karma/wiki/Getting-Started\n[Versioning]: https://github.com/karma-runner/karma/wiki/Versioning\n[Configuration File Overview]: https://github.com/karma-runner/karma/wiki/Configuration-File-Overview\n[Mailing List]: https://groups.google.com/forum/#!forum/karma-users\n[Issuetracker]: https://github.com/karma-runner/karma/issues\n[@JsKarma]: http://twitter.com/JsKarma\n[Browsers]: https://github.com/karma-runner/karma/wiki/Browsers\n[RequireJS]: http://requirejs.org/\n[Istanbul]: https://github.com/gotwarlost/istanbul\n\n',
+112 silly resolved     readmeFilename: 'README.md',
+112 silly resolved     _id: 'karma@0.8.8',
+112 silly resolved     _from: 'karma@~0.8.5' } ]
+113 info install karma@0.8.8 into /usr/node/shopily/node_modules/grunt-karma
+114 info installOne karma@0.8.8
+115 verbose from cache /home/manish/.npm/karma/0.8.8/package/package.json
+116 info /usr/node/shopily/node_modules/grunt-karma/node_modules/karma unbuild
+117 verbose read json /usr/node/shopily/node_modules/grunt-karma/node_modules/karma/package.json
+118 verbose tar unpack /home/manish/.npm/karma/0.8.8/package.tgz
+119 silly lockFile 0a901da3-s-grunt-karma-node-modules-karma /usr/node/shopily/node_modules/grunt-karma/node_modules/karma
+120 verbose lock /usr/node/shopily/node_modules/grunt-karma/node_modules/karma /home/manish/.npm/0a901da3-s-grunt-karma-node-modules-karma.lock
+121 silly lockFile 2f0e0ec7-nish-npm-karma-0-8-8-package-tgz /home/manish/.npm/karma/0.8.8/package.tgz
+122 verbose lock /home/manish/.npm/karma/0.8.8/package.tgz /home/manish/.npm/2f0e0ec7-nish-npm-karma-0-8-8-package-tgz.lock
+123 silly gunzTarPerm modes [ '755', '644' ]
+124 silly gunzTarPerm extractEntry package.json
+125 silly gunzTarPerm extractEntry README.md
+126 silly gunzTarPerm extractEntry LICENSE
+127 silly gunzTarPerm extractEntry bin/karma
+128 silly gunzTarPerm extractEntry CHANGELOG.md
+129 silly gunzTarPerm extractEntry adapter/angular-scenario.js
+130 silly gunzTarPerm extractEntry adapter/jasmine.js
+131 silly gunzTarPerm extractEntry adapter/mocha.js
+132 silly gunzTarPerm extractEntry adapter/qunit.js
+133 silly gunzTarPerm extractEntry adapter/require.js
+134 silly gunzTarPerm extractEntry adapter/lib/angular-scenario.js
+135 silly gunzTarPerm extractEntry adapter/lib/jasmine.js
+136 silly gunzTarPerm extractEntry adapter/lib/mocha.js
+137 silly gunzTarPerm extractEntry adapter/lib/qunit.js
+138 silly gunzTarPerm extractEntry adapter/lib/require.js
+139 silly gunzTarPerm extractEntry .mailmap
+140 silly gunzTarPerm extractEntry config.template
+141 silly gunzTarPerm extractEntry lib/browser.js
+142 silly gunzTarPerm extractEntry lib/file-list.js
+143 silly gunzTarPerm extractEntry lib/helper.js
+144 silly gunzTarPerm extractEntry lib/index.js
+145 silly gunzTarPerm extractEntry lib/init.js
+146 silly gunzTarPerm extractEntry lib/events.js
+147 silly gunzTarPerm extractEntry lib/watcher.js
+148 silly gunzTarPerm extractEntry lib/cli.js
+149 silly gunzTarPerm extractEntry lib/preprocessor.js
+150 silly gunzTarPerm extractEntry lib/server.js
+151 silly gunzTarPerm extractEntry lib/proxy.js
+152 silly gunzTarPerm extractEntry lib/constants.js
+153 silly gunzTarPerm extractEntry lib/reporter.js
+154 silly gunzTarPerm extractEntry lib/config.js
+155 silly gunzTarPerm extractEntry lib/runner.js
+156 silly gunzTarPerm extractEntry lib/launcher.js
+157 silly gunzTarPerm extractEntry lib/web-server.js
+158 silly gunzTarPerm extractEntry lib/logger.js
+159 silly gunzTarPerm extractEntry lib/reporters/Base.js
+160 silly gunzTarPerm extractEntry lib/reporters/Coverage.js
+161 silly gunzTarPerm extractEntry lib/reporters/Dots.js
+162 silly gunzTarPerm extractEntry lib/reporters/DotsColor.js
+163 silly gunzTarPerm extractEntry lib/reporters/Growl.js
+164 silly gunzTarPerm extractEntry lib/reporters/BaseColor.js
+165 silly gunzTarPerm extractEntry lib/reporters/Multi.js
+166 silly gunzTarPerm extractEntry lib/reporters/Progress.js
+167 silly gunzTarPerm extractEntry lib/reporters/ProgressColor.js
+168 silly gunzTarPerm extractEntry lib/reporters/Teamcity.js
+169 silly gunzTarPerm extractEntry lib/reporters/JUnit.js
+170 silly gunzTarPerm extractEntry lib/reporters/images/error.png
+171 silly gunzTarPerm extractEntry lib/reporters/images/failed.png
+172 silly gunzTarPerm extractEntry lib/reporters/images/success.png
+173 silly gunzTarPerm extractEntry lib/runner.js.orig
+174 silly gunzTarPerm extractEntry lib/preprocessors/Coffee.js
+175 error Error: ENOENT, lstat '/usr/node/shopily/node_modules/grunt-karma/node_modules/karma/lib/config.js'
+176 error If you need help, you may report this log at:
+176 error     <http://github.com/isaacs/npm/issues>
+176 error or email it to:
+176 error     <npm-@googlegroups.com>
+177 error System Linux 3.2.0-51-generic-pae
+178 error command "/home/manish/local/bin/node" "/home/manish/local/bin/npm" "install" "grunt-karma" "--save"
+179 error cwd /usr/node/shopily
+180 error node -v v0.10.10
+181 error npm -v 1.2.25
+182 error path /usr/node/shopily/node_modules/grunt-karma/node_modules/karma/lib/config.js
+183 error fstream_path /usr/node/shopily/node_modules/grunt-karma/node_modules/karma/lib/config.js
+184 error fstream_type File
+185 error fstream_class FileWriter
+186 error code ENOENT
+187 error errno 34
+188 error fstream_stack /home/manish/local/lib/node_modules/npm/node_modules/fstream/lib/writer.js:284:26
+188 error fstream_stack Object.oncomplete (fs.js:107:15)
+189 verbose exit [ 34, true ]
